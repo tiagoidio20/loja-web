@@ -1,0 +1,374 @@
+/* ===================================
+   CONFIGURAÇÕES GERAIS
+   (layout feito somente com Flexbox)
+=================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+
+    /* rodapé sempre no fim da página */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ===================================
+   CABEÇALHO
+=================================== */
+
+.cabecalho {
+    background-color: #172554;
+    color: white;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.logo p {
+    margin: 5px 0 0;
+}
+
+
+/* ===================================
+   MENU
+=================================== */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: white;
+    color: #172554;
+    border-radius: 5px;
+}
+
+
+/* ===================================
+   CONTEÚDO PRINCIPAL
+=================================== */
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+/* ===================================
+   BANNER
+=================================== */
+
+.banner {
+    min-height: 320px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-texto {
+    max-width: 700px;
+}
+
+.banner h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* ===================================
+   BOTÃO
+=================================== */
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+
+    background-color: #facc15;
+    color: #111827;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 15px auto 0;
+}
+
+.botao:hover {
+    background-color: #eab308;
+}
+
+
+/* ===================================
+   VANTAGENS
+=================================== */
+
+.vantagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.vantagem {
+    flex: 1 1 250px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vantagem h3 {
+    margin: 10px 0 5px;
+}
+
+.vantagem p {
+    margin: 0;
+    color: #555;
+}
+
+.icone {
+    font-size: 40px;
+}
+
+
+/* ===================================
+   PRODUTOS
+=================================== */
+
+.produtos > h2 {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.produto {
+    /* 4 cards por linha em telas grandes */
+    flex: 1 1 220px;
+    max-width: calc(25% - 15px);
+
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.produto h3 {
+    margin: 15px 0 5px;
+}
+
+.produto p {
+    flex-grow: 1;
+    color: #555;
+}
+
+.produto-imagem {
+    height: 150px;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    font-size: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preco {
+    font-size: 22px;
+    color: #2563eb;
+    margin-top: 10px;
+}
+
+
+/* ===================================
+   SOBRE + OFERTA
+=================================== */
+
+.informacoes {
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.sobre {
+    flex: 2;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.sobre h2 {
+    margin-top: 0;
+}
+
+.oferta {
+    flex: 1;
+    background-color: #172554;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.oferta h2 {
+    margin-top: 0;
+}
+
+.oferta strong {
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+.oferta span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #facc15;
+    margin-top: 5px;
+}
+
+.oferta .botao {
+    margin-left: 0;
+}
+
+
+/* ===================================
+   RODAPÉ
+=================================== */
+
+.rodape {
+    background-color: #111827;
+    color: white;
+    padding: 40px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.rodape > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rodape h3 {
+    margin: 0;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 1000px) {
+
+    .produto {
+        max-width: calc(50% - 10px);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .banner {
+        padding: 30px 20px;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+    }
+
+    .produto {
+        max-width: 100%;
+    }
+
+    .informacoes {
+        flex-direction: column;
+    }
+
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
